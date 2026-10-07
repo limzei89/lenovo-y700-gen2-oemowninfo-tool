@@ -31,7 +31,14 @@ oemowninfo-set.cmd countrycode VALUE
 oemowninfo-set.cmd sn VALUE
 ```
 
-VALUEを正しい値に置き換え、末尾に --write を付けると実際に書き込みます。
+実際に書き込む場合は、VALUEを正しい値に置き換え、末尾に `--write` を付けてください。
+
+```cmd
+oemowninfo-set.cmd countrycode VALUE --write
+oemowninfo-set.cmd sn VALUE --write
+```
+
+`--write`を付けない場合はプレビューのみです。
 変更前・要求値をbackupsへ保存し、書き込み後に読み戻して照合します。バックアップは対象項目の文字列で、パーティション全体ではありません。自動復元・再試行は行いません。結果不明の場合はgetで確認してください。
 入力は1～31文字のASCII（空白・カンマ不可）。countrycode clearは拒否します。nullや00000000を書いてもゼロ埋めにはなりません。
 書き込みは端末の識別情報や動作に影響します。読み取り確認だけならgetを使用してください。
