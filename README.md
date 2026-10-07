@@ -16,6 +16,12 @@ oemowninfo-get.cmd --list
 get対応項目: sn, psn, skuid, fingerprint, countrycode, btmac, wifimac, usbdebugflag, vibcalil, vibcalir, displayid。
 Lenovo TB320FCの解析対象ABL向けです。他機種・別ABLへの対応は保証しません。通常fastbootで接続できても、このツールでアクセスできるかはUSBドライバーによります。ドライバーの自動変更はしません。
 
+## ブートローダーのロック状態
+
+対象のLenovo Y700 Gen 2（TB320FC）では、ブートローダーがlocked（ロック）状態でもunlocked（アンロック）状態でも、oemowninfoコマンドを実行できます。このコマンドを使用するためのブートローダーアンロックは不要です。locked状態での動作も実機で確認しています。
+
+この確認はテストした端末・ABLについてのものです。別のファームウェアでの動作を保証するものではありません。ロック状態にかかわらず、setでの書き込みには --write の指定が必要です。
+
 ## 書き込み
 
 setはsnとcountrycodeのみ対応しています。次はプレビューのみで、USBへアクセスしません。
