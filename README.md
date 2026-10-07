@@ -4,7 +4,7 @@ Windows用。Python 3.10以降をインストールしてください。python.o
 ZIPを展開し、install-dependencies.cmdを実行してください。インターネット接続が必要です。依存ライブラリをこのフォルダーのdependenciesへインストールします。
 Python本体・USBドライバー・依存ライブラリはZIPに含めていません。依存ライブラリにはそれぞれのライセンスが適用されます。
 
-端末をbootloader fastbootモードで接続し、このフォルダーでコマンドを実行してください。
+**端末をbootloader fastbootモードで接続し、このフォルダーでコマンドを実行してください。**
 
 ```cmd
 oemowninfo-get.cmd sn
